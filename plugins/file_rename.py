@@ -144,10 +144,10 @@ async def doc(bot, update):
 	        progress=progress_for_pyrogram,
 	        progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", ms, time.time()))
     except Exception as e:          
-        os.remove(file_path)
-        if ph_path:
-            os.remove(ph_path)
-        return await ms.edit(f" Eʀʀᴏʀ {e}")
+        import shutil
+
+# Replace os.remove(file_path) with shutil.rmtree(directory_path)
+shutil.rmtree(directory_path) Eʀʀᴏʀ {e}")
  
     await ms.delete() 
     os.remove(file_path) 
